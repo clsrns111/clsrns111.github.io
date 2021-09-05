@@ -4,11 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ToDoList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,100&family=IBM+Plex+Sans+Arabic:wght@100;200&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <h1>hi</h1>
+    <small class="greet"></small>
+    <main class="main">
+      <div class="login">
+        <form class="login_form">
+          <input
+            autocomplete="off"
+            id="login_input"
+            placeholder="이름을 입력해주세요"
+            type="sbumit"
+            minlength="2"
+            maxlength="10"
+          />
+        </form>
+      </div>
+      <div class="todo_list">
+        <nav>
+          <form id="todo_submit">
+            <input
+              autocomplete="off"
+              id="todo_write"
+              type="text"
+              maxlength="30"
+              minlength="3"
+              placeholder="해야할 일을 입력해주세요"
+            />
+            <small>Add to Do</small>
+          </form>
+        </nav>
+      </div>
+      <div class="rest">
+        <div class="weather">
+          <div class="local">
+            <h1 class="local_name"></h1>
+          </div>
+          <div class="tem">
+            <div class="icon">
+              <img class="img" id="tem_img" />
+              <small class="icon_dec"></small>
+            </div>
+            <small class="hum"></small>
+            <h1 class="temp"></h1>
+          </div>
+        </div>
+        <div class="clock">
+          <div class="img_container">
+            <img class="img" id="clock_img" />
+          </div>
+          <div>
+            <small class="mouth_day"></small>
+            <h1 class="hour_minute"></h1>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

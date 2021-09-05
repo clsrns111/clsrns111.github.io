@@ -1,0 +1,206 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jua", sans-serif;
+}
+.greet {
+  font-family: "Barlow", sans-serif;
+  top: 200px;
+  left: 370px;
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+}
+
+.todo_list {
+  overflow: auto;
+  border: 1px solid black;
+  background-color: rgba(78, 44, 44, 0.4);
+  width: 600px;
+  height: 100%;
+  border-right: solid 2px rgba(0.5, 0.5, 0.5, 0.3);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo input {
+  margin-right: 20px;
+}
+.delete {
+  margin-left: 20px;
+}
+.main {
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 920px;
+  height: 500px;
+  display: inline-flex;
+}
+
+.img {
+  z-index: 10;
+  width: 100px;
+  background-repeat: no-repeat;
+}
+
+.img_container {
+  margin-right: 15px;
+}
+
+.weather {
+  display: block;
+  background-color: rgba(114, 199, 89, 0.4);
+  border: solid 1px black;
+  width: 320px;
+  height: 70%;
+  border-top-left-radius: 10px;
+}
+
+.clock {
+  height: 150px;
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(73, 105, 211, 0.4);
+  border-bottom-left-radius: 10px;
+  border: 1px solid black;
+  border-top: solid 2px rgba(0.5, 0.5, 0.5, 0.3);
+}
+
+small {
+  font-size: larger;
+}
+
+.tem {
+  font-family: "Barlow", sans-serif;
+  padding: 40px;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+.temp,
+.local_name {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.temp {
+  font-size: 70px;
+}
+
+.local {
+  background-color: rgba(46, 90, 38, 0.4);
+  text-align: center;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hour_minute {
+  font-family: "Barlow", sans-serif;
+}
+
+.hum {
+  opacity: 0.5;
+}
+
+.hour_minute {
+}
+
+nav {
+  text-align: center;
+  border: 1px solid black;
+  height: 44px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(139, 63, 63, 0.3);
+}
+#todo_write {
+  float: right;
+  margin: 0;
+  width: 300px;
+  height: 30px;
+  padding-left: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  color: #fff;
+}
+#todo_submit {
+  visibility: hidden;
+  padding: 3px;
+  height: 30px;
+  margin: 0;
+}
+#todo_write::placeholder {
+  text-align: center;
+  color: #fff;
+}
+.login {
+  position: absolute;
+  top: 50%;
+  left: 32.5%;
+  transform: translate(-50%, -50%);
+}
+#login_input {
+  top: -100px;
+  color: #fff;
+}
+.content,
+.check,
+.delete {
+}
+
+.content {
+  padding: 10px;
+  width: 400px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#login_input {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  border: none;
+  border-bottom: 2px solid black;
+  width: 150px;
+  height: 30px;
+  padding: 20px;
+  margin: 330px;
+}
+#login_input::placeholder {
+  color: #fff;
+  font-size: 13px;
+}
+
+.check:checked + .content {
+  text-decoration: line-through;
+  text-decoration-color: black;
+}
+.delete:hover {
+  color: #fff;
+  cursor: pointer;
+}
