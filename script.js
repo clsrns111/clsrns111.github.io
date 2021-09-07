@@ -44,16 +44,16 @@ function currentTimte() {
   const seconds = time.getSeconds();
   const clock_Img = document.getElementById("clock_img");
 
-  if (8 < hour && hour < 12) {
-    clock_Img.src = "./img/morning.png";
+  if (8 <= hour && hour < 12) {
+    clock_Img.src = "/img/morning.png";
   }
 
   if ((18 <= hour && hour < 24) || (0 < hour && hour < 8)) {
-    clock_Img.src = "./img/evening.png";
+    clock_Img.src = "/img/evening.png";
   }
 
   if (12 <= hour && hour < 18) {
-    clock_Img.src = "./img/afternoon.png";
+    clock_Img.src = "/img/afternoon.png";
   }
   const hour_minute = document.querySelector(".hour_minute");
   const month_day = document.querySelector(".mouth_day");
