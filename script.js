@@ -44,7 +44,7 @@ function currentTimte() {
   const seconds = time.getSeconds();
   const clock_Img = document.getElementById("clock_img");
 
-  if (8 < hour && hour < 12) {
+  if (8 <= hour && hour < 12) {
     clock_Img.src = "./img/morning.png";
   }
 
