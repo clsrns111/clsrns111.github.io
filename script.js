@@ -6,7 +6,6 @@ body.style.backgroundImage = `url(../img/${random + 1}.jpg)`;
 
 //날씨
 async function locationF(position) {
-  const tem = document.querySelector(".tem");
   const tem_img = document.getElementById("tem_img");
   const local_name = document.querySelector(".local_name");
   const hum = document.querySelector(".hum");
@@ -16,7 +15,6 @@ async function locationF(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=5748fe631b00f3edf9319250363ecfc5`;
   const data = await fetch(url);
   const json = await data.json().then((result) => {
-    const name = result.name;
     const { humidity, temp } = result.main;
     const { icon, description } = result.weather[0];
     const temper = document.querySelector(".temp");
@@ -35,13 +33,11 @@ navigator.geolocation.getCurrentPosition(locationF, () => {
 
 //시계
 function currentTimte() {
-  const clock = document.querySelector(".clock");
   const time = new Date();
   const month = time.getMonth();
   const day = time.getDate();
   const hour = time.getHours();
   const minute = time.getMinutes();
-  const seconds = time.getSeconds();
   const clock_Img = document.getElementById("clock_img");
 
   if (8 <= hour && hour < 12) {
@@ -98,9 +94,21 @@ function createElement(loadData) {
   delete_btn.addEventListener("click", () => {
     const text = delete_btn.previousSibling.textContent;
     let idx = arr.indexOf(text);
-    console.log(idx);
     arr.splice(idx, 1);
     todo_list.removeChild(delete_btn.parentNode);
+    localStorage.setItem(login_input.value, JSON.stringify(arr));
+  });
+
+  input.addEventListener("click", () => {
+    const text = input.nextSibling.textContent;
+
+    if (input.checked) {
+      console.log(text);
+      let idx = arr.indexOf(text);
+      arr.splice(idx, 1);
+    } else {
+      arr.push(text);
+    }
     localStorage.setItem(login_input.value, JSON.stringify(arr));
   });
 }
@@ -127,5 +135,3 @@ login_form.addEventListener("submit", (e) => {
     console.log(arr);
   }
 });
-
-//checked
